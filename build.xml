@@ -71,12 +71,20 @@
             <classpath refid="StackAnnotationProject.classpath"/>
         </junit>
     </target>
-    <target name="StackAnnotationProject">
+    <target name="AllTests">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="test.AllTests" todir="${junit.output.dir}"/>
-            <test name="test.MyStringStackTest" todir="${junit.output.dir}"/>
+            <classpath refid="StackAnnotationProject.classpath"/>
+        </junit>
+    </target>
+    <target name="StackAnnotationProject">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+           <!-- <test name="test.AllTests" todir="${junit.output.dir}"/>
+            <test name="test.MyStringStackTest" todir="${junit.output.dir}"/> -->
             <classpath refid="StackAnnotationProject.classpath"/>
         </junit>
     </target>
