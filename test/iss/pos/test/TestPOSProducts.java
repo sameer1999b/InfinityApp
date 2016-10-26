@@ -1,12 +1,12 @@
 package iss.pos.test;
-import static org.junit.Assert.*;
+import junit.framework.TestCase;
 
 import org.junit.Test;
 import iss.pos.Product;
 import iss.pos.POSProducts;
 
 
-public class TestPOSProducts {
+public class TestPOSProducts extends TestCase {
    
     @Test
   	public void testApplePrice() {
