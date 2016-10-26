@@ -8,7 +8,6 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import dnl.utils.text.table.TextTable;
 
 public class PosInterface {
 
@@ -16,20 +15,23 @@ public class PosInterface {
 	private static final int SELECT_SEARCH_PRODUCT = 2;
 
 	public static void main(String args[]) {
+		do{
 		System.out
 				.println("Select Your Menu:\n 1-Product catalog\n 2-Search product");
 		System.out.print("Enter your choice: ");
 
-		Scanner sc = new Scanner(System.in);
-		final int choice = sc.nextInt();
-		switch (choice) {
-		case SELECT_PRODUCT_CATALOG:
-			displayProductCatalog();
-			break;
-		case SELECT_SEARCH_PRODUCT:
-			searchProduct();
-			break;
-		}
+			Scanner sc = new Scanner(System.in);
+			final int choice = sc.nextInt();
+			switch (choice) {
+			case SELECT_PRODUCT_CATALOG:
+				displayProductCatalog();
+				break;
+			case SELECT_SEARCH_PRODUCT:
+				searchProduct();
+				break;
+			}
+			System.out.println("\n");
+		}while(true);
 
 	}
 
