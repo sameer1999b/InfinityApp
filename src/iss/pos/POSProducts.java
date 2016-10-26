@@ -18,4 +18,8 @@ public class POSProducts{
 		return products;
 	}
 	
+	public void addProduct(String brandName,Product product){
+		products.put(brandName, product);
+	}
+	
 }
