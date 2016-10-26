@@ -41,6 +41,14 @@
             <classpath refid="StackAnnotationProject.classpath"/>
         </javac>
     </target>
+    <target name="AllTests">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="test.AllTests" todir="${junit.output.dir}"/>
+            <classpath refid="StackAnnotationProject.classpath"/>
+        </junit>
+    </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
     <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
         <copy todir="${ant.library.dir}">
