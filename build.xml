@@ -63,6 +63,7 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
+	<!--
     <target name="MyStringStackTest">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
@@ -71,6 +72,7 @@
             <classpath refid="StackAnnotationProject.classpath"/>
         </junit>
     </target>
+    -->
     <target name="AllTests">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
@@ -79,6 +81,7 @@
             <classpath refid="StackAnnotationProject.classpath"/>
         </junit>
     </target>
+	<!--
     <target name="StackAnnotationProject">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
@@ -87,7 +90,7 @@
             <test name="test.MyStringStackTest" todir="${junit.output.dir}"/>
             <classpath refid="StackAnnotationProject.classpath"/>
         </junit>
-    </target>
+    </target>-->
     <target name="junitreport">
         <junitreport todir="${junit.output.dir}">
             <fileset dir="${junit.output.dir}">
